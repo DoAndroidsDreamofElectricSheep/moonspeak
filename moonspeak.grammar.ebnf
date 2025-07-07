@@ -1,0 +1,33 @@
+/* MoonSpeak v0.2 EBNF Grammar */
+
+/* Top-level structure */
+expression = term, { binary_op, term } ;
+
+/* Terms */
+term = symbol | variable | constant | function_call | "(", expression, ")" ;
+
+/* Symbols */
+symbol = "+" | "-" | "*" | "/" | "%" | "**" | "¬" | "∧" | "∨" | "→" | "↔" | "⊕" | "⊤" | "⊥" | "=" | "≠" | "∀" | "∃" | "□" | "◇" | "∴" | "∵" | "⊢" | "⊨" ;
+
+/* Variables and constants */
+variable = letter, { letter | digit | "_" } ;
+constant = number | string | boolean ;
+number = [ "-" ], digit, { digit }, [ ".", digit, { digit } ] ;
+string = '"', { any_character - '"' }, '"' ;
+boolean = "⊤" | "⊥" | "true" | "false" ;
+
+/* Function calls */
+function_call = function_name, "(", [ argument_list ], ")" ;
+function_name = letter, { letter | digit | "_" } ;
+argument_list = expression, { ",", expression } ;
+
+/* Binary operations */
+binary_op = arith_op | logic_op | relation_op ;
+arith_op = "+" | "-" | "*" | "/" | "%" | "**" ;
+logic_op = "∧" | "∨" | "→" | "↔" | "⊕" ;
+relation_op = "=" | "≠" | "<" | ">" | "≤" | "≥" ;
+
+/* Basic definitions */
+letter = "A" | "B" | ... | "Z" | "a" | "b" | ... | "z" ;
+digit = "0" | "1" | ... | "9" ;
+any_character = ? any Unicode character ? ;
