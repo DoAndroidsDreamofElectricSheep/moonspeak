@@ -1,6 +1,6 @@
 12# 🌜 MoonSpeak v0.2
 
-🔮 Compact symbolic reasoning language for token-efficient LLM reasoning.
+🔮 Compact symbolic reasoning language for token-efficient LLM inference.
 
 ## Format
 
