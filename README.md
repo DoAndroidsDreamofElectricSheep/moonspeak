@@ -1,4 +1,4 @@
-MoonSpeak LLM
+MoonSpeak LLM symbol language
 # MoonSpeak v0.2 - token-efficient reasoning dictionary
 
 **MoonSpeak** is a compact domain specific language (DSL) for symbolic reasoning
