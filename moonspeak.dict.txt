@@ -1,28 +1,190 @@
-+|plus|arith|3|addition
--|minus|arith|3|subtraction
-*|mul|arith|2|multiplication
-/|div|arith|2|division
-%|mod|arith|2|modulus
-**|pow|arith|1|exponentiation
-¬|not|logic|1|negation
-∧|and|logic|2|conjunction
-∨|or|logic|3|disjunction
-→|imp|logic|4|implication
-↔|iff|logic|5|equivalence
-⊕|xor|logic|4|exclusive-or
-⊤|true|logic|1|boolean true
-⊥|false|logic|1|boolean false
-=|eq|logic|3|equality
-≠|ne|logic|3|inequality
-∀|forall|quant|1|universal quantifier
-∃|exists|quant|1|existential quantifier
-□|box|modal|1|necessity
-◇|diamond|modal|1|possibility
-∴|therefore|reason|1|logical conclusion
-∵|because|reason|1|logical premise
-⊢|vdash|reason|1|syntactic entailment
-⊨|models|reason|1|semantic entailment
-⟨|lt|reason|1|less than
-⟩|gt|reason|1|greater than
-⟨=|le|reason|1|less than or equal
-⟩=|ge|reason|1|greater than or equal
+# MoonSpeak Dictionary v1.0 - Real Estate DSL
+# Format: Unicode|symbol|name|category|priority|description
+# Unicode ranges: U+E000-E0FF (general), U+E100-E1FF (real estate)
+
+# Basic arithmetic and logic operators
+U+002B|+|plus|arith|3|addition
+U+002D|-|minus|arith|3|subtraction
+U+002A|*|mul|arith|2|multiplication
+U+002F|/|div|arith|2|division
+U+0025|%|mod|arith|2|modulus
+U+002A002A|**|pow|arith|1|exponentiation
+U+00AC|¬|not|logic|1|negation
+U+2227|∧|and|logic|2|conjunction
+U+2228|∨|or|logic|3|disjunction
+U+2192|→|imp|logic|4|implication
+U+2194|↔|iff|logic|5|equivalence
+U+2295|⊕|xor|logic|4|exclusive-or
+U+22A4|⊤|true|logic|1|boolean true
+U+22A5|⊥|false|logic|1|boolean false
+U+003D|=|eq|logic|3|equality
+U+2260|≠|ne|logic|3|inequality
+U+2200|∀|forall|quant|1|universal quantifier
+U+2203|∃|exists|quant|1|existential quantifier
+U+25A1|□|box|modal|1|necessity
+U+25C7|◇|diamond|modal|1|possibility
+U+2234|∴|therefore|reason|1|logical conclusion
+U+2235|∵|because|reason|1|logical premise
+U+22A2|⊢|vdash|reason|1|syntactic entailment
+U+22A8|⊨|models|reason|1|semantic entailment
+U+27E8|⟨|lt|reason|1|less than
+U+27E9|⟩|gt|reason|1|greater than
+U+27E8003D|⟨=|le|reason|1|less than or equal
+U+27E9003D|⟩=|ge|reason|1|greater than or equal
+
+# General purpose symbols (U+E000-E0FF range)
+U+E000||money|general|1|monetary value
+U+E001||time|general|1|temporal reference
+U+E002||location|general|1|geographical location
+U+E003||person|general|1|individual person
+U+E004||company|general|1|business entity
+U+E005||contract|general|1|legal agreement
+U+E006||document|general|1|official document
+U+E007||analysis|general|1|analytical process
+U+E008||market|general|1|marketplace
+U+E009||value|general|1|assessed worth
+U+E00A||investment|general|1|financial investment
+U+E00B||return|general|1|financial return
+U+E00C||risk|general|1|financial risk
+U+E00D||profit|general|1|financial gain
+U+E00E||loss|general|1|financial loss
+
+# Real Estate Domain-Specific Symbols (U+E100-E1FF range)
+# Property Types
+U+E100||property|realestate|1|real estate property
+U+E101||residential|realestate|1|residential property
+U+E102||commercial|realestate|1|commercial property
+U+E103||industrial|realestate|1|industrial property
+U+E104||retail|realestate|1|retail property
+U+E105||office|realestate|1|office building
+U+E106||warehouse|realestate|1|warehouse facility
+U+E107||apartment|realestate|1|apartment unit
+U+E108||condo|realestate|1|condominium
+U+E109||house|realestate|1|single family house
+U+E10A||townhouse|realestate|1|townhouse
+U+E10B||duplex|realestate|1|duplex property
+U+E10C||land|realestate|1|vacant land
+U+E10D||lot|realestate|1|building lot
+
+# Financial Terms
+U+E110||price|realestate|1|property price
+U+E111||rent|realestate|1|rental payment
+U+E112||mortgage|realestate|1|mortgage loan
+U+E113||downpayment|realestate|1|down payment
+U+E114||closing|realestate|1|closing costs
+U+E115||appraisal|realestate|1|property appraisal
+U+E116||assessment|realestate|1|tax assessment
+U+E117||equity|realestate|1|property equity
+U+E118||appreciation|realestate|1|value appreciation
+U+E119||depreciation|realestate|1|value depreciation
+U+E11A||cashflow|realestate|1|cash flow
+U+E11B||cap_rate|realestate|1|capitalization rate
+U+E11C||roi|realestate|1|return on investment
+U+E11D||irr|realestate|1|internal rate of return
+U+E11E||npv|realestate|1|net present value
+U+E11F||ltv|realestate|1|loan to value ratio
+U+E120||dscr|realestate|1|debt service coverage ratio
+
+# Transaction Terms
+U+E130||buy|realestate|1|purchase transaction
+U+E131||sell|realestate|1|sale transaction
+U+E132||lease|realestate|1|lease agreement
+U+E133||sublease|realestate|1|sublease agreement
+U+E134||listing|realestate|1|property listing
+U+E135||offer|realestate|1|purchase offer
+U+E136||counteroffer|realestate|1|counter offer
+U+E137||acceptance|realestate|1|offer acceptance
+U+E138||escrow|realestate|1|escrow account
+U+E139||title|realestate|1|property title
+U+E13A||deed|realestate|1|property deed
+U+E13B||inspection|realestate|1|property inspection
+U+E13C||contingency|realestate|1|contract contingency
+U+E13D||due_diligence|realestate|1|due diligence period
+
+# Property Characteristics
+U+E140||sqft|realestate|1|square footage
+U+E141||bedroom|realestate|1|bedroom count
+U+E142||bathroom|realestate|1|bathroom count
+U+E143||parking|realestate|1|parking spaces
+U+E144||garage|realestate|1|garage facility
+U+E145||pool|realestate|1|swimming pool
+U+E146||garden|realestate|1|garden area
+U+E147||balcony|realestate|1|balcony space
+U+E148||basement|realestate|1|basement area
+U+E149||attic|realestate|1|attic space
+U+E14A||hvac|realestate|1|heating ventilation air conditioning
+U+E14B||utilities|realestate|1|utility services
+U+E14C||amenities|realestate|1|property amenities
+U+E14D||condition|realestate|1|property condition
+U+E14E||age|realestate|1|property age
+U+E14F||renovation|realestate|1|property renovation
+
+# Location and Zoning
+U+E150||neighborhood|realestate|1|neighborhood area
+U+E151||district|realestate|1|district zone
+U+E152||zoning|realestate|1|zoning classification
+U+E153||residential_zone|realestate|1|residential zoning
+U+E154||commercial_zone|realestate|1|commercial zoning
+U+E155||mixed_use|realestate|1|mixed use zoning
+U+E156||school_district|realestate|1|school district
+U+E157||walkability|realestate|1|walkability score
+U+E158||transit|realestate|1|public transportation
+U+E159||proximity|realestate|1|proximity to amenities
+
+# Market and Investment Terms
+U+E160||market_value|realestate|1|fair market value
+U+E161||comparable|realestate|1|comparable property
+U+E162||absorption_rate|realestate|1|market absorption rate
+U+E163||inventory|realestate|1|property inventory
+U+E164||supply|realestate|1|property supply
+U+E165||demand|realestate|1|property demand
+U+E166||vacancy_rate|realestate|1|vacancy rate
+U+E167||occupancy_rate|realestate|1|occupancy rate
+U+E168||turnover|realestate|1|tenant turnover
+U+E169||stabilization|realestate|1|property stabilization
+U+E16A||development|realestate|1|property development
+U+E16B||redevelopment|realestate|1|property redevelopment
+U+E16C||gentrification|realestate|1|neighborhood gentrification
+
+# Professional Roles
+U+E170||agent|realestate|1|real estate agent
+U+E171||broker|realestate|1|real estate broker
+U+E172||developer|realestate|1|property developer
+U+E173||investor|realestate|1|real estate investor
+U+E174||landlord|realestate|1|property landlord
+U+E175||tenant|realestate|1|property tenant
+U+E176||appraiser|realestate|1|property appraiser
+U+E177||inspector|realestate|1|property inspector
+U+E178||attorney|realestate|1|real estate attorney
+U+E179||lender|realestate|1|mortgage lender
+U+E17A||underwriter|realestate|1|loan underwriter
+U+E17B||property_manager|realestate|1|property manager
+
+# Multi-word Phrases (High Compression Value)
+U+E1A0||real_estate|realestate|1|real estate
+U+E1A1||property_management|realestate|1|property management
+U+E1A2||market_analysis|realestate|1|market analysis
+U+E1A3||investment_property|realestate|1|investment property
+U+E1A4||rental_income|realestate|1|rental income
+U+E1A5||operating_expenses|realestate|1|operating expenses
+U+E1A6||net_operating_income|realestate|1|net operating income
+U+E1A7||gross_rent_multiplier|realestate|1|gross rent multiplier
+U+E1A8||price_per_square_foot|realestate|1|price per square foot
+U+E1A9||cost_per_square_foot|realestate|1|cost per square foot
+U+E1AA||debt_to_income_ratio|realestate|1|debt to income ratio
+U+E1AB||property_tax|realestate|1|property tax
+U+E1AC||homeowners_insurance|realestate|1|homeowners insurance
+U+E1AD||private_mortgage_insurance|realestate|1|private mortgage insurance
+U+E1AE||homeowners_association|realestate|1|homeowners association
+U+E1AF||multiple_listing_service|realestate|1|multiple listing service
+U+E1B0||comparative_market_analysis|realestate|1|comparative market analysis
+U+E1B1||highest_and_best_use|realestate|1|highest and best use
+U+E1B2||as_is_condition|realestate|1|as is condition
+U+E1B3||seller_financing|realestate|1|seller financing
+U+E1B4||owner_financing|realestate|1|owner financing
+U+E1B5||lease_to_own|realestate|1|lease to own
+U+E1B6||rent_to_own|realestate|1|rent to own
+U+E1B7||fix_and_flip|realestate|1|fix and flip
+U+E1B8||buy_and_hold|realestate|1|buy and hold
+U+E1B9||wholesale_real_estate|realestate|1|wholesale real estate
+U+E1BA||real_estate_investment_trust|realestate|1|real estate investment trust

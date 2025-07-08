@@ -7,7 +7,43 @@ expression = term, { binary_op, term } ;
 term = symbol | variable | constant | function_call | "(", expression, ")" ;
 
 /* Symbols */
-symbol = "+" | "-" | "*" | "/" | "%" | "**" | "¬" | "∧" | "∨" | "→" | "↔" | "⊕" | "⊤" | "⊥" | "=" | "≠" | "∀" | "∃" | "□" | "◇" | "∴" | "∵" | "⊢" | "⊨" ;
+symbol = arithmetic_symbol | logic_symbol | general_symbol | realestate_symbol ;
+
+/* Arithmetic symbols */
+arithmetic_symbol = "+" | "-" | "*" | "/" | "%" | "**" ;
+
+/* Logic symbols */
+logic_symbol = "¬" | "∧" | "∨" | "→" | "↔" | "⊕" | "⊤" | "⊥" | "=" | "≠" | "∀" | "∃" | "□" | "◇" | "∴" | "∵" | "⊢" | "⊨" ;
+
+/* General purpose symbols (U+E000-E0FF) */
+general_symbol = "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" ;
+
+/* Real estate symbols (U+E100-E1FF) */
+realestate_symbol = property_symbol | financial_symbol | transaction_symbol | characteristic_symbol | location_symbol | market_symbol | role_symbol | phrase_symbol ;
+
+/* Property type symbols */
+property_symbol = "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" ;
+
+/* Financial symbols */
+financial_symbol = "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" ;
+
+/* Transaction symbols */
+transaction_symbol = "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" ;
+
+/* Property characteristic symbols */
+characteristic_symbol = "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" ;
+
+/* Location and zoning symbols */
+location_symbol = "" | "" | "" | "" | "" | "" | "" | "" | "" | "" ;
+
+/* Market and investment symbols */
+market_symbol = "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" ;
+
+/* Professional role symbols */
+role_symbol = "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" ;
+
+/* Multi-word phrase symbols */
+phrase_symbol = "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" | "" ;
 
 /* Variables and constants */
 variable = letter, { letter | digit | "_" } ;

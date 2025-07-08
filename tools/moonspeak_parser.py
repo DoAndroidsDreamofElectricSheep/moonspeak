@@ -22,9 +22,10 @@ class MoonSpeakParser:
         
         self.load_dictionary(dict_path)
     
-    def health_check(self) -> None:
+    def health_check(self) -> bool:
         """Perform a health check on the parser"""
         print(f"Health Check: Loaded {len(self.symbols)} symbols")
+        return len(self.symbols) > 0
     
     def load_dictionary(self, dict_path: str) -> None:
         """Load the MoonSpeak dictionary from a file"""
@@ -36,10 +37,10 @@ class MoonSpeakParser:
                         continue
                     
                     parts = line.split('|')
-                    if len(parts) != 5:
+                    if len(parts) != 6:
                         continue
                     
-                    symbol, name, category, priority_str, description = parts
+                    unicode_code, symbol, name, category, priority_str, description = parts
                     self.symbols[symbol] = name
         except FileNotFoundError:
             print(f"Error: Dictionary file not found: {dict_path}")
